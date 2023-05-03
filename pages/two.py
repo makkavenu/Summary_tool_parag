@@ -138,20 +138,20 @@ def recurisive_summarization(text):
 #         return recurisive_outline(outline_text(text_1lakh[0:8000]) + "\n "+ text_1lakh[8000:])
 
 
-# @st.cache(suppress_st_warning=True)
-# def summarize_website(url):
-#     """Summarizes the content of the given website using GPT-3."""
-#     # Retrieve the content of the website
-#     response = requests.get(url)
-#     html = response.text
-#
-#     # Extract the main content of the website using a library like BeautifulSoup
-#     soup = BeautifulSoup(html, "html.parser")
-#     text = soup.text
-#     text = re.sub(r'(\n)+', '\n', text)
-#     #text = text[0:8000]
-#     summary = recurisive_summarization(text)
-#     return summary
+@st.cache(suppress_st_warning=True)
+def summarize_website(url):
+    """Summarizes the content of the given website using GPT-3."""
+    # Retrieve the content of the website
+    response = requests.get(url)
+    html = response.text
+
+    # Extract the main content of the website using a library like BeautifulSoup
+    soup = BeautifulSoup(html, "html.parser")
+    text = soup.text
+    text = re.sub(r'(\n)+', '\n', text)
+    #text = text[0:8000]
+    summary = recurisive_summarization(text)
+    return summary
 
 # @st.cache(suppress_st_warning=True)
 # def outline_website(url):
@@ -226,15 +226,15 @@ if "input_type" in st.session_state:
             #     st.write("OUTLINE:")
             #     st.write(outline)
 
-    # elif st.session_state["input_type"] == "Enter website URL":
-    #     url = st.text_input("Enter URL here... ")
-    #     with st.form("form4"):
-    #     	submit = st.form_submit_button(label = 'Submit')
-    #     if submit:
-    #         if st.session_state["task_type"] == "Summarize Text":
-    #             summary = summarize_website(url)
-    #             st.write("SUMMARY:")
-    #             st.write(summary)
+    elif st.session_state["input_type"] == "Enter website URL":
+        url = st.text_input("Enter URL here... ")
+        with st.form("form4"):
+        	submit = st.form_submit_button(label = 'Submit')
+        if submit:
+            if st.session_state["task_type"] == "Summarize Text":
+                summary = summarize_website(url)
+                st.write("SUMMARY:")
+                st.write(summary)
             # elif st.session_state["task_type"] == "Outline Text":
             #     outline = outline_website(url)
             #     st.write("OUTLINE:")

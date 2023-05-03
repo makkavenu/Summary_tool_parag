@@ -39,7 +39,7 @@ st.session_state["task_type"] = "Summarize Text"#selection
 #     return input_type
 
 # if selection:
-input_type = str(st.selectbox("How will you provide text? ", ["None", "Enter Text", "Upload File"]))
+input_type = str(st.selectbox("How will you provide text? ", ["None", "Enter Text", "Upload File", "Enter website URL"]))
 st.session_state["input_type"] = input_type
 if input_type != "None":
     nav_page("Summarization%20Play%20Ground")
