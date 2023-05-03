@@ -20,7 +20,7 @@ def request_image_model(description):
 
     except:
         time.sleep(10)
-        return request_openai(question)
+        return request_image_model(description)
 
     return response
 
