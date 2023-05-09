@@ -108,6 +108,7 @@ def recurisive_summarization(text):
     chain = load_summarize_chain(OpenAI(temperature=0.7), chain_type="refine", return_intermediate_steps=True, question_prompt=PROMPT, refine_prompt=refine_prompt)
     s = chain({"input_documents": docs}, return_only_outputs=True)
     summary_text= s['output_text']
+    print("summary_text at 111 line:", summary_text)
     return summary_text
 
 
