@@ -138,7 +138,7 @@ def recurisive_summarization(text):
 #         return recurisive_outline(outline_text(text_1lakh[0:8000]) + "\n "+ text_1lakh[8000:])
 
 
-@st.cache(suppress_st_warning=True)
+# @st.cache(suppress_st_warning=True)
 def summarize_website(url):
     """Summarizes the content of the given website using GPT-3."""
     # Retrieve the content of the website
