@@ -77,7 +77,7 @@ def summarize_text(text):
 #         return summarize_text(text_1lakh)
 #     else:
 #         return recurisive_summarization(summarize_text(text_1lakh[0:8000]) + "\n "+ text_1lakh[8000:])
-@st.cache(suppress_st_warning=True, show_spinner=False)
+# @st.cache(suppress_st_warning=True, show_spinner=False)
 def recurisive_summarization(text):
     # text = uploaded[list(uploaded.keys())[0]]
     # text = str(text)
