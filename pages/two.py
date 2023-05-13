@@ -233,17 +233,18 @@ if "input_type" in st.session_state:
         if submit:
             if st.session_state["task_type"] == "Summarize Text":
                 summary = summarize_website(url)
-                st.write("SUMMARY:")
-                st.write(summary)
+                with st.container():
+                    st.write("SUMMARY:")
+                    st.write(summary)
             # elif st.session_state["task_type"] == "Outline Text":
             #     outline = outline_website(url)
             #     st.write("OUTLINE:")
             #     st.write(outline)
 
-    with st.form("form"):
-    	prev_page = st.form_submit_button(label = 'Go Back')
-    if prev_page:
-        nav_page("Summarization%20Input%20Selection")
+#     with st.form("form"):
+#     	prev_page = st.form_submit_button(label = 'Go Back')
+#     if prev_page:
+#         nav_page("Summarization%20Input%20Selection")
 else:
     st.write("You have not selected input Format, Click on the below 'GO Back' button to select input format(text or pdf/txt file)")
     with st.form("form5"):
