@@ -18,7 +18,7 @@ def asking_chatGPT_model(system_content, user_question_content):
             #{"role": "system", "content": system_content},
             {"role": "user", "content": str(user_question_content)},],
         temperature = 0,
-        max_tokens = 300,
+        max_tokens = 1000,
     )
     output_response = str(response["choices"][0]["message"]["content"])
     output_response = output_response.replace('$', '\$')
