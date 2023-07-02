@@ -21,6 +21,7 @@ show_pages(
 	Page("pages/two.py", "Summarization Play Ground", ":bar_chart:"),
         Page("pages/image.py", "Image Generation Tool", ":books:"),
         Page("pages/chatgpt.py", "ChatGPT Tool", ":books:"),
+        Page("pages/video.py", "Video Summarization Tool", ":books:"),
     ]
 )
 
@@ -74,10 +75,12 @@ def append_row_to_gsheet(email_id):
 
 
 # st.write("Hi! ")
-tool_selection = str(st.selectbox("Which tool you wanted to use: ", ["None", "Summarization Tool", "Image Genration Tool", "ChatGPT Tool"]))
+tool_selection = str(st.selectbox("Which tool you wanted to use: ", ["None", "Text Summarization Tool", "Video Summarization Tool" ,"Image Genration Tool", "ChatGPT Tool"]))
 
-if tool_selection == "Summarization Tool":
+if tool_selection == "Text Summarization Tool":
     nav_page("Summarization%20Input%20Selection")
+elif tool_selection == "Video Summarization Tool":
+    nav_page("Video%20Summarization%20Tool")
 elif tool_selection == "Image Genration Tool":
     nav_page("Image%20Generation%20Tool")
 elif tool_selection == "ChatGPT Tool":

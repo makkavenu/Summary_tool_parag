@@ -12,7 +12,7 @@ openai.api_key = st.secrets["api_key"]
 from st_pages import Page, show_pages, add_page_title
 from streamlit.components.v1 import html
 
-from gpt_index import SimpleDirectoryReader,LLMPredictor, PromptHelper
+#from gpt_index import SimpleDirectoryReader,LLMPredictor, PromptHelper
 from langchain import OpenAI
 import openai
 import time
