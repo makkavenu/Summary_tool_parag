@@ -14,7 +14,6 @@ from langchain.text_splitter import TokenTextSplitter
 from langchain.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 import os
-os.environ['OPENAI_API_KEY']="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"#openai.api_key
 
 
 @st.cache_resource
@@ -59,7 +58,8 @@ def recurisive_summarization(text):
 # @st.cache_data
 def convert_video_to_audio(video_path, audio_path):
     video = VideoFileClip(video_path)
-    video.audio.write_audiofile(audio_path)
+    video.audio.write_audiofile(audio_path, codec='pcm_s16le', ffmpeg_params=["-ar", "44100", "-ac", "1"])
+    # video.audio.write_audiofile(audio_path)
 
 def main():
     st.title("Video Summarization Tool")
