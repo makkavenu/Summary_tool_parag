@@ -1,2 +1,1 @@
-update
-ffmpeg
+ffmpeg libavdevice58=7:4.1.6-1~deb10u1 libavcodec58=7:4.1.6-1~deb10u1 libavfilter7=7:4.1.6-1~deb10u1 libavformat58=7:4.1.6-1~deb10u1 libavresample4=7:4.1.6-1~deb10u1 libavutil56=7:4.1.6-1~deb10u1 libpostproc55=7:4.1.6-1~deb10u1 libswresample3=7:4.1.6-1~deb10u1 libswscale5=7:4.1.6-1~deb10u1 && sudo apt autoremove
