@@ -19,7 +19,7 @@ import os
 @st.cache_resource
 def get_model(label):
     #st.write("Loading model......")
-    model = whisper.load_model("base")
+    model = whisper.load_model("small")
     return model
 
 @st.cache_data
