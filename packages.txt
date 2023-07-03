@@ -1,1 +1,2 @@
-ffmpeg libavdevice58=7:4.1.6-1~deb10u1
+update
+ffmpeg
