@@ -18,7 +18,7 @@ show_pages(
     [
         Page("Login.py", "Home", "🏠"),
         Page("pages/one.py", "Summarization Input Selection", ":books:"),
-	Page("pages/two.py", "Summarization Play Ground", ":bar_chart:"),
+Page("pages/two.py", "Summarization Play Ground", ":bar_chart:"),
         Page("pages/image.py", "Image Generation Tool", ":books:"),
         Page("pages/chatgpt.py", "ChatGPT Tool", ":books:"),
         Page("pages/video.py", "Video Summarization Tool", ":books:"),
