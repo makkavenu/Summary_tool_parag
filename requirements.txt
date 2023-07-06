@@ -10,3 +10,4 @@ gpt-index==0.4.28
 langchain==0.0.109
 moviepy==1.0.3
 openai-whisper==20230314
+pydub==0.25.1
