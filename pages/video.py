@@ -83,9 +83,11 @@ def main():
         st.success("Video converted to audio!")
         st.audio(audio_path, format="audio/wav")
 
-        model = get_model(1)
+        #model = get_model(1)
         with st.spinner("Converting Audio to Text....."):
-            result = model.transcribe(audio_path)
+            #result = model.transcribe(audio_path)
+            audio_file = open(audio_path, "rb")
+            result = openai.Audio.translate("whisper-1", audio_file)
             st.success("Audio converted to Text!")
             #st.write("Text: ", result["text"])
             text = result["text"]
