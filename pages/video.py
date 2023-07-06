@@ -15,8 +15,6 @@ from langchain.prompts import PromptTemplate
 from langchain.chains.summarize import load_summarize_chain
 import os
 from pydub import AudioSegment
-openai.api_key = "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"
-os.environ['OPENAI_API_KEY']=openai.api_key
 
 
 @st.cache_resource
