@@ -16,12 +16,12 @@ add_page_title("Home")
 # and icons should be
 show_pages(
     [
-        Page("Login.py", "Home", "🏠"),
-        Page("pages/one.py", "Summarization Input Selection", ":books:"),
-Page("pages/two.py", "Summarization Play Ground", ":bar_chart:"),
-        Page("pages/image.py", "Image Generation Tool", ":books:"),
-        Page("pages/chatgpt.py", "ChatGPT Tool", ":books:"),
-        Page("pages/video.py", "Video Summarization Tool", ":books:"),
+        Page("Login.py", "Home"),
+        Page("pages/one.py", "Summarization Input Selection"),
+Page("pages/two.py", "Summarization Play Ground"),
+        Page("pages/image.py", "Image Generation Tool"),
+        Page("pages/chatgpt.py", "ChatGPT Tool"),
+        Page("pages/video.py", "Video Summarization Tool"),
     ]
 )
 
