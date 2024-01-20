@@ -18,10 +18,10 @@ show_pages(
     [
         Page("Login.py", "Home"),
         Page("pages/Text_Summarization.py", "Text_Summarization"),
-Page("pages/two.py", "Summarization Play Ground"),
-        Page("pages/image.py", "Image Generation Tool"),
-        Page("pages/chatgpt.py", "ChatGPT Tool"),
-        Page("pages/video.py", "Video Summarization Tool"),
+Page("pages/Summarization_Play_Ground.py", "Summarization_Play_Ground"),
+        Page("pages/Image_Generation_Tool.py", "Image_Generation_Tool"),
+        Page("pages/ChatGPT_Tool.py", "ChatGPT_Tool"),
+        Page("pages/Video_Summarization_Tool.py", "Video_Summarization_Tool"),
     ]
 )
 
@@ -80,11 +80,11 @@ tool_selection = str(st.selectbox("Which tool you wanted to use: ", ["None", "Te
 if tool_selection == "Text Summarization Tool":
     nav_page("Text_Summarization")
 elif tool_selection == "Video Summarization Tool":
-    nav_page("Video%20Summarization%20Tool")
+    nav_page("Video_Summarization_Tool")
 elif tool_selection == "Image Genration Tool":
-    nav_page("Image%20Generation%20Tool")
+    nav_page("Image_Generation_Tool")
 elif tool_selection == "ChatGPT Tool":
-    nav_page("ChatGPT%20Tool")
+    nav_page("ChatGPT_Tool")
 
 
 
